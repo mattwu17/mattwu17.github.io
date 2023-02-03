@@ -1,0 +1,14 @@
+#map {
+  display: block;
+  position: fixed;
+  margin-left: -1848px;
+  margin-top: -1968px;
+  z-index: 1;
+}
+
+#char {
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+}
