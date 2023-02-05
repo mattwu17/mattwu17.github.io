@@ -9,14 +9,14 @@ var charH = 1968;
 function spawnChar() {
   var char = document.getElementById("char");
   char.style.marginLeft = window.innerWidth / 2 - 43 + "px";
-  char.style.marginTop = window.innerHeight / 2 + 3 + "px";
+  char.style.marginTop = window.innerHeight / 2 - 73 + "px";
 
   resizeBackground();
 }
 
 function handleInput(event) {
   if (event.key === "Enter") {
-    console.log("You pressed enter.");
+    window.location.href = "bag.html";
   } else if (event.key === "w") {
     moveUp();
   } else if (event.key === "a") {
@@ -26,8 +26,6 @@ function handleInput(event) {
   } else if (event.key === "d") {
     moveRight();
   }
-
-  //console.log(event.key)
 }
 
 function moveUp() {

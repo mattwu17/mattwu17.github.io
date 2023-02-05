@@ -1,14 +1,25 @@
+@font-face {
+  font-family: pokemon;
+  src: url(pokemon_pixel_font.ttf);
+}
+
+p {
+  font-family: pokemon;
+  font-size: 100px;
+  text-shadow: 2px 2px #d0d0c8;
+}
+
 #map {
   display: block;
   position: fixed;
   margin-left: -1848px;
   margin-top: -1968px;
-  z-index: 1;
+  z-index: -2;
 }
 
 #char {
   position: fixed;
   display: block;
   margin: 0 auto;
-  z-index: 2;
+  z-index: -1;
 }

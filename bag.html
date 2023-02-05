@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<script src="scripts/bagview.js"></script>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="styles/bag_styles.css" />
+    <title>Pokemon Portfolio</title>
+  </head>
+  <body>
+    <div class="bagmenu">
+      <img src="images/bag_menu.png" style="width: 100%" />
+      <img
+        class="leftarrow"
+        src="images/left_arrow.png"
+        onclick="rotateLeft()"
+      />
+      <img
+        class="rightarrow"
+        src="images/right_arrow.png"
+        onclick="rotateRight()"
+      />
+      <div class="baglabel" id="baglabel">Education</div>
+      <div class="baglist" id="baglist">
+        <ul id="bagitems">
+          <li class="item">
+            <span class="item-text"> COLLEGE </span>
+          </li>
+          <li class="item">
+            <span class="item-text"> HIGH SCHOOL </span>
+          </li>
+        </ul>
+      </div>
+      <div class="textbox" id="textbox">
+        Use the [a] and [d] keys to navigate.
+      </div>
+    </div>
+  </body>
+</html>
