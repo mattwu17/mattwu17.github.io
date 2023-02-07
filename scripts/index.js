@@ -6,6 +6,16 @@ var inMenu = false;
 var charW = 1848;
 var charH = 1968;
 
+function playMusic() {
+  const song = document.getElementById("song");
+  song.play();
+}
+
+function playDing() {
+  const ding = document.getElementById("ding");
+  ding.play();
+}
+
 function spawnChar() {
   var char = document.getElementById("char");
   char.style.marginLeft = window.innerWidth / 2 - 43 + "px";
@@ -16,6 +26,7 @@ function spawnChar() {
 
 function handleInput(event) {
   if (event.key === "Enter") {
+    playDing();
     window.location.href = "bag.html";
   } else if (event.key === "w") {
     moveUp();
@@ -26,6 +37,7 @@ function handleInput(event) {
   } else if (event.key === "d") {
     moveRight();
   }
+  playMusic();
 }
 
 function moveUp() {

@@ -291,6 +291,9 @@ function rotateLeft() {
   // just some lil animations
   animateBag();
 
+  // add some noise
+  playDing();
+
   // update the name of the bag section
   const bagLabel = document.getElementById("bag-label");
   bagLabel.innerHTML = info[currIdx].title;
@@ -324,6 +327,9 @@ function rotateRight() {
   // animations or smth
   animateBag();
 
+  // add a lil sound
+  playDing();
+
   // update the name of the bag section
   const bagLabel = document.getElementById("bag-label");
   bagLabel.innerHTML = info[currIdx].title;
@@ -352,6 +358,9 @@ function rotateRight() {
 }
 
 function displayDescription(self) {
+  // play a lil noise
+  playDing();
+
   // overrides existing input handling
   window.onkeydown = hideDescription;
 
@@ -397,6 +406,9 @@ function displayDescription(self) {
 function hideDescription(event) {
   // only executes if the escape key is pressed
   if (event.key === "Escape") {
+    // play a lil noise
+    playDing();
+
     // returns function to handle keyboard inputs to normal
     window.onkeydown = handleInput;
 
@@ -418,6 +430,11 @@ function hideDescription(event) {
     descriptionLocation.style.display = "none";
     descriptionBulletList.style.display = "none";
   }
+}
+
+function playDing() {
+  const ding = new Audio("audio/select.wav");
+  ding.play();
 }
 
 function load() {
