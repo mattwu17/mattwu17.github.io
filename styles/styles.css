@@ -1,6 +1,9 @@
 @font-face {
   font-family: pokemon;
-  src: url(pokemon_pixel_font.ttf);
+  src: url("../fonts/pokemon_pixel_font.eot") format("embedded-opentype"),
+    url("../fonts/pokemon_pixel_font.svg") format("svg"),
+    url("../fonts/pokemon_pixel_font.ttf") format("truetype"),
+    url("../fonts/pokemon_pixel_font.woff") format("woff");
 }
 
 p {
