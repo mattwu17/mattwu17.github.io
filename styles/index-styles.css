@@ -6,6 +6,10 @@
     url("../fonts/pokemon_pixel_font.woff") format("woff");
 }
 
+body {
+  background: black;
+}
+
 p {
   font-family: pokemon;
   font-size: 100px;
@@ -13,8 +17,9 @@ p {
 }
 
 #map {
-  display: block;
+  display: none;
   position: fixed;
+  background: black;
   margin-left: -1848px;
   margin-top: -1968px;
   transition: margin 100ms;
@@ -23,7 +28,7 @@ p {
 
 #char {
   position: fixed;
-  display: block;
+  display: none;
   margin: 0 auto;
   z-index: -1;
 }

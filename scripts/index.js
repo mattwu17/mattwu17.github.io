@@ -973,6 +973,7 @@ function adjustCharAndMap() {
   var char = document.getElementById("char");
   char.style.marginLeft = window.innerWidth / 2 - 43 + "px";
   char.style.marginTop = window.innerHeight / 2 - 86 + "px";
+  char.style.display = "block";
 
   // keep the map centered
   var w = window.innerWidth;
@@ -982,6 +983,7 @@ function adjustCharAndMap() {
     charW * -1 + (w - UNIT) / 2 + "px";
   document.getElementById("map").style.marginTop =
     charH * -1 + (h - UNIT) / 2 + "px";
+  document.getElementById("map").style.display = "block";
 }
 
 window.onload = adjustCharAndMap;
