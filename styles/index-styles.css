@@ -17,6 +17,7 @@ p {
   position: fixed;
   margin-left: -1848px;
   margin-top: -1968px;
+  transition: margin 100ms;
   z-index: -2;
 }
 
