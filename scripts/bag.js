@@ -262,10 +262,15 @@ var currIdx = 0;
 
 function handleInput(event) {
   if (event.key === "Escape") {
+    playDing();
     window.location.href = "index.html";
   } else if (event.key === "a") {
+    // add some noise
+    playDing();
     rotateLeft();
   } else if (event.key === "d") {
+    // add a lil sound
+    playDing();
     rotateRight();
   }
 }
@@ -290,9 +295,6 @@ function rotateLeft() {
 
   // just some lil animations
   animateBag();
-
-  // add some noise
-  playDing();
 
   // update the name of the bag section
   const bagLabel = document.getElementById("bag-label");
@@ -326,9 +328,6 @@ function rotateRight() {
 
   // animations or smth
   animateBag();
-
-  // add a lil sound
-  playDing();
 
   // update the name of the bag section
   const bagLabel = document.getElementById("bag-label");
