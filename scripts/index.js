@@ -22,11 +22,6 @@ var yCoord = localStorage.getItem("yCoord")
   ? parseInt(localStorage.getItem("yCoord"))
   : 13;
 
-// adjust
-if (localStorage.getItem("margin-left")) {
-} else {
-}
-
 const x = "x";
 const o = "o";
 const d = "d";
@@ -162,7 +157,7 @@ const map = [
     o,
     o,
     o,
-    o,
+    x,
     x,
     x,
     x,
@@ -509,6 +504,36 @@ const map = [
     o,
     o,
     o,
+    o,
+    o,
+    x,
+  ],
+  [
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
     x,
     x,
     x,
@@ -566,36 +591,6 @@ const map = [
     x,
     x,
     x,
-    x,
-    x,
-    x,
-    o,
-    o,
-    x,
-  ],
-  [
-    x,
-    x,
-    x,
-    x,
-    x,
-    x,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    o,
-    x,
-    x,
-    x,
-    x,
-    x,
     o,
     o,
     x,
@@ -615,8 +610,8 @@ const map = [
     x,
     x,
     x,
-    x,
-    x,
+    o,
+    o,
     o,
     o,
     o,
@@ -719,6 +714,36 @@ const map = [
     o,
     o,
     x,
+    x,
+    x,
+    x,
+  ],
+  [
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    x,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
+    o,
     x,
     x,
     x,
@@ -768,13 +793,7 @@ function playDing() {
 function handleInput(event) {
   if (event.key === "Enter") {
     playDing();
-
-    localStorage.setItem("xCoord", xCoord.toString());
-    localStorage.setItem("yCoord", yCoord.toString());
-    localStorage.setItem("charW", charW.toString());
-    localStorage.setItem("charH", charH.toString());
-
-    window.location.href = "bag.html";
+    showVerticalMenu();
   } else if (event.key === "w") {
     moveUp();
   } else if (event.key === "a") {
@@ -788,6 +807,52 @@ function handleInput(event) {
   playMusic();
 }
 
+function menuHandleInput(event) {
+  if (event.key === "Escape") {
+    hideVerticalMenu();
+  }
+}
+
+function goToBag() {
+  window.location.href = "bag.html";
+}
+
+function goToPlayerCard() {
+  window.location.href = "card.html";
+}
+
+function goToLinkedIn() {
+  window.location.href = "https://www.linkedin.com/in/matthew-wu-017/";
+}
+
+function goToGitHub() {
+  window.location.href = "https://github.com/mattwu17";
+}
+
+function showVerticalMenu() {
+  // change keydown behaviour
+  window.onkeydown = menuHandleInput;
+
+  const box = document.getElementById("vertical-menu-box");
+  const list = document.getElementById("vertical-menu-list");
+
+  // show the elements
+  box.style.display = "block";
+  list.style.display = "block";
+}
+
+function hideVerticalMenu() {
+  // restore behavior on keydown
+  window.onkeydown = handleInput;
+
+  const box = document.getElementById("vertical-menu-box");
+  const list = document.getElementById("vertical-menu-list");
+
+  // hide the elements
+  box.style.display = "none";
+  list.style.display = "none";
+}
+
 function positionError() {
   console.log("you can't go here!");
 }
@@ -799,7 +864,9 @@ function moveUp() {
   if (map[newY][xCoord] != o) {
     positionError();
   } else {
+    // update and store coordinate
     yCoord -= 1;
+    localStorage.setItem("yCoord", yCoord.toString());
 
     // logic for animation type
     if (alternating) {
@@ -815,6 +882,9 @@ function moveUp() {
       parseInt(marginTop.substring(0, marginTop.length - 2)) + UNIT;
     document.getElementById("map").style.marginTop = newMargin + "px";
     charH -= UNIT;
+
+    // store margin information
+    localStorage.setItem("charH", charH.toString());
   }
 }
 
@@ -825,7 +895,9 @@ function moveDown() {
   if (map[newY][xCoord] != o) {
     positionError();
   } else {
+    // update and store coordinate
     yCoord += 1;
+    localStorage.setItem("yCoord", yCoord.toString());
 
     // logic for animation type
     if (alternating) {
@@ -841,6 +913,9 @@ function moveDown() {
       parseInt(marginTop.substring(0, marginTop.length - 2)) - UNIT;
     document.getElementById("map").style.marginTop = newMargin + "px";
     charH += UNIT;
+
+    // store margin information
+    localStorage.setItem("charH", charH.toString());
   }
 }
 
@@ -851,7 +926,9 @@ function moveLeft() {
   if (map[yCoord][newX] != o) {
     positionError();
   } else {
+    // update and store coord
     xCoord -= 1;
+    localStorage.setItem("xCoord", xCoord.toString());
 
     // logic for animation type
     if (alternating) {
@@ -867,6 +944,9 @@ function moveLeft() {
       parseInt(marginLeft.substring(0, marginLeft.length - 2)) + UNIT;
     document.getElementById("map").style.marginLeft = newMargin + "px";
     charW -= UNIT;
+
+    // store margin information
+    localStorage.setItem("charW", charW.toString());
   }
 }
 
@@ -877,7 +957,9 @@ function moveRight() {
   if (map[yCoord][newX] != o) {
     positionError();
   } else {
+    // update and store coord
     xCoord += 1;
+    localStorage.setItem("xCoord", xCoord.toString());
 
     // logic for animation type
     if (alternating) {
@@ -893,6 +975,9 @@ function moveRight() {
       parseInt(marginLeft.substring(0, marginLeft.length - 2)) - UNIT;
     document.getElementById("map").style.marginLeft = newMargin + "px";
     charW += UNIT;
+
+    // store margin information
+    localStorage.setItem("charW", charW.toString());
   }
 }
 

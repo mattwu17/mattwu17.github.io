@@ -10,8 +10,23 @@
     <title>Matt's World</title>
   </head>
   <body>
+    <!--audio for the song that plays on the page-->
     <audio id="song" src="audio/route101.mp3" preload="auto"></audio>
+
+    <!--images to define the map and character-->
     <img src="images/map.png" id="map" />
     <img src="images/front1.png" id="char" />
+
+    <!--popup menu for selecting options-->
+    <div id="vertical-menu">
+      <img src="images/vertical_menu.png" id="vertical-menu-box" />
+    </div>
+    <ul id="vertical-menu-list">
+      <li onclick="goToBag()">Resume</li>
+      <li onclick="goToPlayerCard()">About Me</li>
+      <li onclick="goToLinkedIn()">LinkedIn</li>
+      <li onclick="goToGitHub()">GitHub</li>
+      <li onclick="hideVerticalMenu()">Exit</li>
+    </ul>
   </body>
 </html>

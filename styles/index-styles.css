@@ -32,3 +32,38 @@ p {
   margin: 0 auto;
   z-index: -1;
 }
+
+#vertical-menu {
+  position: relative;
+}
+
+#vertical-menu-box {
+  display: none;
+  position: absolute;
+  width: 260px;
+  height: 450px;
+  right: 0px;
+}
+
+ul#vertical-menu-list {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  font-family: pokemon;
+  font-size: 80px;
+  width: 250px;
+  height: 80vh;
+  right: 15px;
+  top: -60px;
+}
+
+ul#vertical-menu-list li {
+  border: 5px solid transparent;
+  height: 60px;
+  color: #484848;
+  padding-left: 18px;
+}
+
+ul#vertical-menu-list li:hover {
+  border: 5px solid #f86058;
+}
