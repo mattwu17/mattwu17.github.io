@@ -854,14 +854,25 @@ function hideVerticalMenu() {
 }
 
 function positionError() {
-  console.log("you can't go here!");
+  const bump = new Audio("audio/bump.wav");
+  bump.play();
+}
+
+function door() {
+  window.location.href = "https://linktr.ee/mattwu17";
 }
 
 function moveUp() {
+  // set the character's appearance
+  const char = document.getElementById("char");
+  char.src = "images/back1.png";
+
   // positioning logic
   var newY = yCoord - 1;
 
-  if (map[newY][xCoord] != o) {
+  if (map[newY][xCoord] == d) {
+    door();
+  } else if (map[newY][xCoord] != o) {
     positionError();
   } else {
     // update and store coordinate
@@ -889,10 +900,16 @@ function moveUp() {
 }
 
 function moveDown() {
+  // set the character's appearance
+  const char = document.getElementById("char");
+  char.src = "images/front1.png";
+
   // positioning logic
   var newY = yCoord + 1;
 
-  if (map[newY][xCoord] != o) {
+  if (map[newY][xCoord] == d) {
+    door();
+  } else if (map[newY][xCoord] != o) {
     positionError();
   } else {
     // update and store coordinate
@@ -920,10 +937,16 @@ function moveDown() {
 }
 
 function moveLeft() {
+  // set the character's appearance
+  const char = document.getElementById("char");
+  char.src = "images/left1.png";
+
   // positioning logic
   var newX = xCoord - 1;
 
-  if (map[yCoord][newX] != o) {
+  if (map[yCoord][newX] == d) {
+    door();
+  } else if (map[yCoord][newX] != o) {
     positionError();
   } else {
     // update and store coord
@@ -951,10 +974,16 @@ function moveLeft() {
 }
 
 function moveRight() {
+  // set the character's appearance
+  const char = document.getElementById("char");
+  char.src = "images/right1.png";
+
   // positioning logic
   var newX = xCoord + 1;
 
-  if (map[yCoord][newX] != o) {
+  if (map[yCoord][newX] == d) {
+    door();
+  } else if (map[yCoord][newX] != o) {
     positionError();
   } else {
     // update and store coord
