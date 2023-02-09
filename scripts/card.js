@@ -1,5 +1,5 @@
 function goBack() {
-  window.location.href = "index.html";
+  window.location.href = "map.html";
 }
 
 window.onkeydown = goBack;

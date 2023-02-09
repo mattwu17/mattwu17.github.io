@@ -263,7 +263,7 @@ var currIdx = 0;
 function handleInput(event) {
   if (event.key === "Escape") {
     playDing();
-    window.location.href = "index.html";
+    window.location.href = "map.html";
   } else if (event.key === "a") {
     // add some noise
     playDing();

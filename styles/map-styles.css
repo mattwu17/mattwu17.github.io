@@ -1,0 +1,69 @@
+@font-face {
+  font-family: pokemon;
+  src: url("../fonts/pokemon_pixel_font.eot") format("embedded-opentype"),
+    url("../fonts/pokemon_pixel_font.svg") format("svg"),
+    url("../fonts/pokemon_pixel_font.ttf") format("truetype"),
+    url("../fonts/pokemon_pixel_font.woff") format("woff");
+}
+
+body {
+  background: black;
+}
+
+p {
+  font-family: pokemon;
+  font-size: 100px;
+  text-shadow: 2px 2px #d0d0c8;
+}
+
+#map {
+  display: none;
+  position: fixed;
+  background: black;
+  margin-left: -1848px;
+  margin-top: -1968px;
+  transition: margin 100ms;
+  z-index: -2;
+}
+
+#char {
+  position: fixed;
+  display: none;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+#vertical-menu {
+  position: relative;
+}
+
+#vertical-menu-box {
+  display: none;
+  position: absolute;
+  width: 260px;
+  height: 450px;
+  right: 0px;
+}
+
+ul#vertical-menu-list {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  font-family: pokemon;
+  font-size: 80px;
+  width: 250px;
+  height: 80vh;
+  right: 15px;
+  top: -60px;
+}
+
+ul#vertical-menu-list li {
+  border: 5px solid transparent;
+  height: 60px;
+  color: #484848;
+  padding-left: 18px;
+}
+
+ul#vertical-menu-list li:hover {
+  border: 5px solid #f86058;
+}

@@ -7,31 +7,12 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="http://127.0.0.1:5500/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="styles/index-styles.css" />
-    <title>Matt's World</title>
+    <title>Pokémon Matt</title>
   </head>
   <body>
-    <!--audio for the song that plays on the page-->
-    <audio
-      id="song"
-      src="audio/route101.mp3"
-      volumte="0.5"
-      preload="auto"
-    ></audio>
-
-    <!--images to define the map and character-->
-    <img src="images/map.png" id="map" />
-    <img src="images/front1.png" id="char" />
-
-    <!--popup menu for selecting options-->
-    <div id="vertical-menu">
-      <img src="images/vertical_menu.png" id="vertical-menu-box" />
+    <div id="loading">
+      <img id="main-img" src="images/copyright.png" style="width: 100%" />
+      <div id="instructions">[Press Enter to Begin]</div>
     </div>
-    <ul id="vertical-menu-list">
-      <li onclick="goToBag()">Resume</li>
-      <li onclick="goToPlayerCard()">About Me</li>
-      <li onclick="goToLinkedIn()">LinkedIn</li>
-      <li onclick="goToGitHub()">GitHub</li>
-      <li onclick="hideVerticalMenu()">Exit</li>
-    </ul>
   </body>
 </html>

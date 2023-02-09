@@ -7,63 +7,44 @@
 }
 
 body {
-  background: black;
+  background-color: black;
+  text-align: center;
 }
 
-p {
-  font-family: pokemon;
-  font-size: 100px;
-  text-shadow: 2px 2px #d0d0c8;
-}
-
-#map {
-  display: none;
-  position: fixed;
-  background: black;
-  margin-left: -1848px;
-  margin-top: -1968px;
-  transition: margin 100ms;
-  z-index: -2;
-}
-
-#char {
-  position: fixed;
-  display: none;
-  margin: 0 auto;
-  z-index: -1;
-}
-
-#vertical-menu {
+#loading {
   position: relative;
+  height: 100%;
 }
 
-#vertical-menu-box {
-  display: none;
-  position: absolute;
-  width: 260px;
-  height: 450px;
-  right: 0px;
+#main-img {
+  display: block;
+  position: relative;
+  height: 100%;
+  opacity: 1;
+  transition: 2s;
 }
 
-ul#vertical-menu-list {
-  display: none;
+#instructions {
+  display: block;
   position: absolute;
-  list-style-type: none;
   font-family: pokemon;
-  font-size: 80px;
-  width: 250px;
-  height: 80vh;
-  right: 15px;
-  top: -60px;
+  font-size: 6vw;
+  font-weight: bold;
+  color: white;
+  left: 28%;
+  bottom: 10%;
+  animation: blink-animation 2s steps(2, start) infinite;
+  -webkit-animation: blink-animation 2s steps(2, start) infinite;
 }
 
-ul#vertical-menu-list li {
-  border: 5px solid transparent;
-  height: 60px;
-  color: #484848;
-  padding-left: 18px;
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
-ul#vertical-menu-list li:hover {
-  border: 5px solid #f86058;
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
