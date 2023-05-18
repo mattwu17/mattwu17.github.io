@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "descriptiveEntry"
+    label: "Education Entry"
+    folder: "descriptiveEntries"
+    filter: { field: "language", value: "Education" }
+    create: true
+    fields:
+      - {
+          label: "Entry Type",
+          name: "entryType",
+          widget: "select",
+          options:
+            ["Education", "Employment", "Skills", "Projects", "Activities"],
+        }
+      - { label: "Outer Title (short)", name: "outerTitle", widget: "string" }
+      - { label: "Title", name: "descriptionTitle", widget: "string" }
+      - { label: "Date", name: "descriptionDate", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Description", name: "description", widget: "list" }

@@ -8,11 +8,27 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="styles/index-styles.css" />
     <title>Pokémon Matt</title>
+
+    <!-- authentication script for Netlify CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div id="loading">
       <img id="main-img" src="images/copyright.png" style="width: 100%" />
       <div id="instructions">[Press Enter to Begin]</div>
     </div>
+
+    <!-- script for redirect after getting Netlify access token -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
