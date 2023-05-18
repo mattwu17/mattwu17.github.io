@@ -781,7 +781,7 @@ const map = [
 ];
 
 function playDing() {
-  const ding = new Audio("../audio/select.wav");
+  const ding = new Audio("audio/select.wav");
   ding.play();
 }
 
@@ -807,11 +807,11 @@ function menuHandleInput(event) {
 }
 
 function goToBag() {
-  window.location.href = "../bag/index.html";
+  window.location.href = "bag.html";
 }
 
 function goToPlayerCard() {
-  window.location.href = "../card/index.html";
+  window.location.href = "card.html";
 }
 
 function goToLinkedIn() {
@@ -847,7 +847,7 @@ function hideVerticalMenu() {
 }
 
 function positionError() {
-  const bump = new Audio("../audio/bump.wav");
+  const bump = new Audio("audio/bump.wav");
   bump.play();
 }
 
@@ -858,7 +858,7 @@ function door() {
 function moveUp() {
   // set the character's appearance
   const char = document.getElementById("char");
-  char.src = "../images/back1.png";
+  char.src = "images/back1.png";
 
   // positioning logic
   var newY = yCoord - 1;
@@ -895,7 +895,7 @@ function moveUp() {
 function moveDown() {
   // set the character's appearance
   const char = document.getElementById("char");
-  char.src = "../images/front1.png";
+  char.src = "images/front1.png";
 
   // positioning logic
   var newY = yCoord + 1;
@@ -932,7 +932,7 @@ function moveDown() {
 function moveLeft() {
   // set the character's appearance
   const char = document.getElementById("char");
-  char.src = "../images/left1.png";
+  char.src = "images/left1.png";
 
   // positioning logic
   var newX = xCoord - 1;
@@ -969,7 +969,7 @@ function moveLeft() {
 function moveRight() {
   // set the character's appearance
   const char = document.getElementById("char");
-  char.src = "../images/right1.png";
+  char.src = "images/right1.png";
 
   // positioning logic
   var newX = xCoord + 1;
@@ -1005,73 +1005,73 @@ function moveRight() {
 
 function up1() {
   const char = document.getElementById("char");
-  char.src = "../images/back2.png";
+  char.src = "images/back2.png";
 
   setTimeout(() => {
-    char.src = "../images/back1.png";
+    char.src = "images/back1.png";
   }, 50);
 }
 
 function up2() {
   const char = document.getElementById("char");
-  char.src = "../images/back3.png";
+  char.src = "images/back3.png";
 
   setTimeout(() => {
-    char.src = "../images/back1.png";
+    char.src = "images/back1.png";
   }, 50);
 }
 
 function left1() {
   const char = document.getElementById("char");
-  char.src = "../images/left2.png";
+  char.src = "images/left2.png";
 
   setTimeout(() => {
-    char.src = "../images/left1.png";
+    char.src = "images/left1.png";
   }, 50);
 }
 
 function left2() {
   const char = document.getElementById("char");
-  char.src = "../images/left3.png";
+  char.src = "images/left3.png";
 
   setTimeout(() => {
-    char.src = "../images/left1.png";
+    char.src = "images/left1.png";
   }, 50);
 }
 
 function down1() {
   const char = document.getElementById("char");
-  char.src = "../images/front2.png";
+  char.src = "images/front2.png";
 
   setTimeout(() => {
-    char.src = "../images/front1.png";
+    char.src = "images/front1.png";
   }, 50);
 }
 
 function down2() {
   const char = document.getElementById("char");
-  char.src = "../images/front3.png";
+  char.src = "images/front3.png";
 
   setTimeout(() => {
-    char.src = "../images/front1.png";
+    char.src = "images/front1.png";
   }, 50);
 }
 
 function right1() {
   const char = document.getElementById("char");
-  char.src = "../images/right2.png";
+  char.src = "images/right2.png";
 
   setTimeout(() => {
-    char.src = "../images/right1.png";
+    char.src = "images/right1.png";
   }, 50);
 }
 
 function right2() {
   const char = document.getElementById("char");
-  char.src = "../images/right3.png";
+  char.src = "images/right3.png";
 
   setTimeout(() => {
-    char.src = "../images/right1.png";
+    char.src = "images/right1.png";
   }, 50);
 }
 

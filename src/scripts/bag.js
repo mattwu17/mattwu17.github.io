@@ -249,25 +249,25 @@ var activities = {
 
 let info = [education, employment, skills, projects, activities];
 let bagImgs = [
-  "../images/bag1.png",
-  "../images/bag2.png",
-  "../images/bag3.png",
-  "../images/bag4.png",
-  "../images/bag5.png",
+  "images/bag1.png",
+  "images/bag2.png",
+  "images/bag3.png",
+  "images/bag4.png",
+  "images/bag5.png",
 ];
 let bagDotImgs = [
-  "../images/15.png",
-  "../images/25.png",
-  "../images/35.png",
-  "../images/45.png",
-  "../images/55.png",
+  "images/15.png",
+  "images/25.png",
+  "images/35.png",
+  "images/45.png",
+  "images/55.png",
 ];
 var currIdx = 0;
 
 function handleInput(event) {
   if (event.key === "Escape") {
     playDing();
-    window.location.href = "../map/index.html";
+    window.location.href = "map.html";
   } else if (event.key === "a") {
     // add some noise
     playDing();
@@ -436,7 +436,7 @@ function hideDescription(event) {
 }
 
 function playDing() {
-  const ding = new Audio("../audio/select.wav");
+  const ding = new Audio("audio/select.wav");
   ding.play();
 }
 
