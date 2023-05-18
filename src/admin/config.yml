@@ -8,7 +8,7 @@ public_folder: "/images"
 collections:
   - name: "descriptiveEntry"
     label: "Education Entry"
-    folder: "descriptiveEntries"
+    folder: "public/static/descriptiveEntries/education"
     filter: { field: "language", value: "Education" }
     create: true
     fields:
@@ -24,4 +24,8 @@ collections:
       - { label: "Date", name: "descriptionDate", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
-      - { label: "Description", name: "description", widget: "list" }
+      - name: "Description"
+        label: "Description"
+        widget: "list"
+        fields:
+          - { label: "Description", name: "description", widget: "text" }
