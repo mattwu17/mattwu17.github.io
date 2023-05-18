@@ -6,10 +6,22 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "entry"
-    label: "entry"
-    folder: "_entries"
+  - name: "descriptiveEntry"
+    label: "Education Entry"
+    folder: "descriptiveEntries"
+    filter: { field: "language", value: "Education" }
     create: true
     fields:
-      - { label: "Layout", name: "layout", default: "entry" }
-      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Entry Type",
+          name: "entryType",
+          widget: "select",
+          options:
+            ["Education", "Employment", "Skills", "Projects", "Activities"],
+        }
+      - { label: "Outer Title (short)", name: "outerTitle", widget: "string" }
+      - { label: "Title", name: "descriptionTitle", widget: "String" }
+      - { label: "Date", name: "descriptionDate", widget: "String" }
+      - { label: "Subtitle", name: "subtitle", widget: "String" }
+      - { label: "Location", name: "location", widget: "String" }
+      - { label: "Description", name: "description", widget: "list" }
