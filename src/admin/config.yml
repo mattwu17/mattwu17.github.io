@@ -20,8 +20,8 @@ collections:
             ["Education", "Employment", "Skills", "Projects", "Activities"],
         }
       - { label: "Outer Title (short)", name: "outerTitle", widget: "string" }
-      - { label: "Title", name: "descriptionTitle", widget: "String" }
-      - { label: "Date", name: "descriptionDate", widget: "String" }
-      - { label: "Subtitle", name: "subtitle", widget: "String" }
-      - { label: "Location", name: "location", widget: "String" }
+      - { label: "Title", name: "descriptionTitle", widget: "string" }
+      - { label: "Date", name: "descriptionDate", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
       - { label: "Description", name: "description", widget: "list" }

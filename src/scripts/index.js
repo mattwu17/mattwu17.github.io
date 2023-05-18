@@ -11,13 +11,13 @@ function loadWorld(event) {
     mainImg.style.opacity = "0";
 
     setTimeout(() => {
-      mainImg.src = "images/title.png";
+      mainImg.src = "src/images/title.png";
       mainImg.style.opacity = 1;
       instructions.style.display = "block";
       second = true;
     }, 2500);
   } else if (second) {
-    window.location.href = "map/index.html";
+    window.location.href = "src/map/index.html";
   }
 }
 
