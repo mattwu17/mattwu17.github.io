@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "entry"
+    label: "entry"
+    folder: "_entries"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", default: "entry" }
+      - { label: "Title", name: "title", widget: "string" }
