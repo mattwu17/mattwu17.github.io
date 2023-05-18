@@ -1,0 +1,50 @@
+@font-face {
+  font-family: pokemon;
+  src: url("../fonts/pokemon_pixel_font.eot") format("embedded-opentype"),
+    url("../fonts/pokemon_pixel_font.svg") format("svg"),
+    url("../fonts/pokemon_pixel_font.ttf") format("truetype"),
+    url("../fonts/pokemon_pixel_font.woff") format("woff");
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+#loading {
+  position: relative;
+  height: 100%;
+}
+
+#main-img {
+  display: block;
+  position: relative;
+  height: 100%;
+  opacity: 1;
+  transition: 2s;
+}
+
+#instructions {
+  display: block;
+  position: absolute;
+  font-family: pokemon;
+  font-size: 6vw;
+  font-weight: bold;
+  color: white;
+  left: 28%;
+  bottom: 10%;
+  animation: blink-animation 2s steps(2, start) infinite;
+  -webkit-animation: blink-animation 2s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
